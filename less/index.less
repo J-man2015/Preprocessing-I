@@ -54,6 +54,167 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	width:100%;
+	font-size:10px;
+	nav{
+		// border:1px solid black;
+		font-size:2rem;
+		padding:1%;
+		margin:10px auto;
+		text-align: end;
+		a{
+			margin-left: 2%;
+			color: @colorblack;
+			text-decoration: none;
+		&:hover{
+			color:silver;
+		}
+		}
+
+				
+	}
+	
+	
+
+	.topsection{
+	font-size: 20px;
+	// border:3px solid red;
+	background-color: lightgray;
+	margin:10px; 
+	padding: 10px 0;
+		div{
+		margin: 30px 30px 70px;
+		border: 1px solid black;
+		
+		
+		h1{
+			font-size: @h1font;
+		}
+		h2{
+			font-size:@font30;
+			margin-top:10px;
+		}
+		p{
+			margin: 30px auto;
+		}
+		button{
+			font-size: 2.5rem;
+			color:whitesmoke;
+			background-color: grey;
+			border-radius:8px;
+			padding:10px;
+			transition-duration: 2s
+			
+			
+			}
+			button:hover{
+				background-color:white;
+				color:black;	
+		}
+		
+	}
+}
+	.middle_section{
+	// border: 3px solid blue;
+	width:100%;
+	margin:30px auto;
+	.flex(space-between);
+	h2{
+		font-size: @h1font;
+	}
+	
+	p{
+		font-size: @font30;
+		
+	}
+	div{
+		width:48%;
+		
+		}
+	.Goodat{
+			width:100%;
+			border:1px solid black;
+			height:16.5%;
+	}	
+	}
+
+	@media(max-width:500px){
+		div{
+			.flex{
+				flex-direction: column;
+			}
+		}
+		p{
+			font-size:20px;
+			
+		}
+		.mobilebackground();
+
+		
+	}
+	table{
+		width:100%;
+		margin-bottom:15px;
+		
+		.WorkHistory{
+			font-size:3rem;
+		}
+		th{
+		font-size:@font30;
+		
+		
+		}
+		td{
+		font-size:2rem;
+		
+		text-align: center;
+		padding: 10px;
+		
+		}
+		tr{
+			border-bottom: 0.5px solid black;
+			border-top:0.5px solid black;
+			
+		}
+		.boldtable{
+			font-weight: bold;
+
+		}
+		.rowgrey{
+			background-color: lightgray
+		}
+		
+	}
+	h1{
+		font-size: 3rem;
+	}
+	footer{
+		text-align: center;
+		font-size: 1.4rem;
+		background-color: gray;
+		color:white;
+		margin-top:25px;
+		p{
+			padding: 20px ;	
+	}
+	}
+
+
+
+@h1font: 4rem;
+
+@colorblack: midnightblue;
+
+@font30:2.5rem;
+
+.flex(@justify-content){
+	display:flex;
+	justify-content: @justify-content;
+}
+.mobilebackground{
+	background-color:lavender;
+}
+	
 }
 
